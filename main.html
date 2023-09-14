@@ -20,17 +20,17 @@
 				}else if(arr[i] > secondHighest)
 					scndHighest = arr[i];
 			}
-			if(highest == scndHighest) return "-Infinity";
+			if(highest == scndHighest) return '-Infinity';
 			else return scndHighest;
 		}
 
 		function Main() {
-			var n = prompt("Enter the number of elements");
-			var arr = [];
-			for (var i = 0; i < n; i++) {
-				arr[i] = prompt("Enter element " + (i+1));
-			}
-			alert(secondHighest(arr));
+			// var n = prompt("Enter the number of elements");
+			// var arr = [];
+			// for (var i = 0; i < n; i++) {
+			// 	arr[i] = prompt("Enter element " + (i+1));
+			// }
+			// alert(secondHighest(arr));
 		}
 		Main();
 	</script>
