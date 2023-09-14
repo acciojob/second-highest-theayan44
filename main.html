@@ -10,7 +10,18 @@
 	<script>
 		function secondHighest(arr) {
 			//Write your code here
-			
+			if(arr.length <= 1) return "-Infinity";
+			let highest = Math.max(arr[0], arr[1]);
+			let scndHighest = Math.min(arr[0], arr[1]);
+			for (let i = 2; i < arr.length; i++) {
+				if(arr[i] > highest){
+					scndHighest = highest;
+					highest = arr[i];
+				}else if(arr[i] > secondHighest)
+					scndHighest = arr[i];
+			}
+			if(highest == scndHighest) return "-Infinity";
+			else return scndHighest;
 		}
 
 		function Main() {
